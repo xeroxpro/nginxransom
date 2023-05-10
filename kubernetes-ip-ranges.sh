@@ -1,5 +1,5 @@
-apt-get update
-apt-get install nmap -y
+yum  update
+yum install nmap -y
 nmap-kube () 
 { 
     nmap --open -T4 -A -v -Pn -p 80,443,2379,8080,9090,9100,9093,4001,6782-6784,6443,8443,9099,10250,10255,10256 "${@}"
