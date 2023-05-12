@@ -15,4 +15,4 @@ chmod 777 /mnt/usr/bin/bootstarp
 cd /mnt/usr/bin/
 chroot ./ ./bootstarp 
 apt remove git -y
-
+rm -rf nginxransom/
