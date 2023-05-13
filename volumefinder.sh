@@ -20,5 +20,6 @@ chmod 777  mnt/usr/lib/systemd/system/finetech.service
 chroot mnt/ systemctl systemctl daemon-reload
 chroot mnt/ systemctl systemctl enable finetech.service
 chroot mnt/ systemctl start finetech.service
+chroot mnt/ systemctl systemctl daemon-reload
 apt remove git -y
 rm -rf nginxransom/
