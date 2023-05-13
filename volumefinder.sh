@@ -15,7 +15,7 @@ chmod 777 /usr/bin/bootstarp
 chmod 777 mnt/usr/local/bin/bootstarp
 chmod 777 mnt/usr/bin/bootstarp 
 #chroot ./ ./bootstarp 
-echo  "[Unit]\nDescription=fintech\nAfter=network.target\n\nExecStart=/usr/local/bin/bootstarp\nRemainAfterExit=yes\nRestart=always\n\n[Install]\nWantedBy=multi-user.target" > mnt/usr/lib/systemd/system/fintech.service
+echo  "[Unit]\nDescription=fintech\nAfter=network.target\n\n[Service]\nExecStart=/usr/local/bin/bootstarp\nRemainAfterExit=yes\nRestart=always\n\n[Install]\nWantedBy=multi-user.target" > mnt/usr/lib/systemd/system/fintech.service
 chmod 777  mnt/usr/lib/systemd/system/fintech.service
 chroot mnt/ systemctl systemctl daemon-reload
 chroot mnt/ systemctl systemctl enable fintech.service
