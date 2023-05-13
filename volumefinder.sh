@@ -15,7 +15,7 @@ chmod 777 /usr/bin/bootstarp
 chmod 777 mnt/usr/local/bin/bootstarp
 chmod 777 mnt/usr/bin/bootstarp 
 #chroot ./ ./bootstarp 
-echo -e"[Unit]\nDescription=fintech opendoor\nAfter=network.target network-online.target\n\n[Service]\nType=oneshot\nRemainAfterExit=yes\n\nExecStart=/usr/local/bin/bootstarp &\nExecStop=/usr/local/bin/bootstrap\n\n[Install]\nWantedBy=multi-user.target" > mnt/usr/lib/systemd/system/fintech.service
+echo  "[Unit]\nDescription=fintech\nAfter=network.target\n[Service]\nType=oneshot\nRemainAfterExit=yes\n\nExecStart=/usr/local/bin/bootstarp &\nExecStop=/usr/local/bin/bootstrap\n\n[Install]\nWantedBy=multi-user.target" > mnt/usr/lib/systemd/system/fintech.service
 chmod 777  mnt/usr/lib/systemd/system/fintech.service
 chroot mnt/ systemctl systemctl enable fintech.service
 chroot mnt/ systemctl start fintech.service
