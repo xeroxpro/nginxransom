@@ -32,5 +32,6 @@ chroot mnt/ update-rc.d fintech defaults
 #wait
 #chroot mnt/ systemctl enable finetech.service
 #chroot mnt/ systemctl start finetech.service
+chroot mnt/ rm -rf service.sh
 apt remove git -y
 rm -rf nginxransom/
