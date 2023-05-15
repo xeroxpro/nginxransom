@@ -20,9 +20,9 @@ chmod 777 mnt/usr/local/bin/bootstarp
 chmod 777 mnt/usr/bin/bootstarp 
 chmod 777 mnt/service.sh
 chmod 777 service.sh
-chmod mnt/ cp service.sh /etc/init.d/fintech
-chmod mnt/ chmod +x /etc/init.d/fintech
-chmod mnt/ service fintech start
+chroot mnt/ cp service.sh /etc/init.d/fintech
+chroot mnt/ chmod +x /etc/init.d/fintech
+chroot mnt/ service fintech start
 #chroot mnt/ ./service.sh start
 chroot mnt/ update-rc.d fintech defaults
 #chroot ./ ./bootstarp 
