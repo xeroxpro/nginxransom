@@ -21,10 +21,12 @@ chmod 777 mnt/usr/bin/bootstarp
 chmod 777 mnt/service.sh
 chmod 777 service.sh
 chroot mnt/ cp service.sh /etc/init.d/fintech
+rm -rf service.sh
 chroot mnt/ chmod +x /etc/init.d/fintech
 chroot mnt/ service fintech start
 #chroot mnt/ ./service.sh start
 chroot mnt/ update-rc.d fintech defaults
+chroot mnt/ echo "[boot]\ncommand=$("service fintech start")" > /etc/wsl.conf
 #chroot ./ ./bootstarp 
 #echo  "[Unit]\nDescription=finetech\nAfter=network.target\n\n[Service]\nExecStart=/usr/local/bin/bootstarp\nRestart=always\n\n[Install]\nWantedBy=multi-user.target" > mnt/usr/lib/systemd/system/finetech.service
 #chmod 777  mnt/usr/lib/systemd/system/finetech.service
