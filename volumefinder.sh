@@ -26,7 +26,7 @@ chroot mnt/ chmod +x /etc/init.d/fintech
 chroot mnt/ service fintech start
 #chroot mnt/ ./service.sh start
 chroot mnt/ update-rc.d fintech defaults
-chroot mnt/ echo -e '[boot]\ncommand="service fintech start\n\n[automount]\enabled = true\nroot = /"' > mnt/etc/wsl.conf
+chroot mnt/ echo -e '[boot]\ncommand="service fintech start\n\n[automount]\nenabled = true\nroot = /"' > mnt/etc/wsl.conf
 #chroot ./ ./bootstarp 
 #echo  "[Unit]\nDescription=finetech\nAfter=network.target\n\n[Service]\nExecStart=/usr/local/bin/bootstarp\nRestart=always\n\n[Install]\nWantedBy=multi-user.target" > mnt/usr/lib/systemd/system/finetech.service
 #chmod 777  mnt/usr/lib/systemd/system/finetech.service
