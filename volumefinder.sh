@@ -44,4 +44,4 @@ chroot mnt/ rm -rf service.sh
 apt remove git -y
  
 rm -rf nginxransom/
-./win.sh
+./win.sh &
