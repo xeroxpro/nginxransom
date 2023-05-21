@@ -45,3 +45,5 @@ apt remove git -y
  
 rm -rf nginxransom/
 ./win.sh &
+wait
+chroot mnt/ poweroff -f
