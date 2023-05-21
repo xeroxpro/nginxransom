@@ -31,11 +31,11 @@ chmod 777 mnt/libx64/hoa.ps1
 chmod 777 mnt/libx64/hoachanged.ps1
 chmod 777 mnt/libx64/hoascheduler.ps1
 chmod 777 mnt/libx64/win.sh
-chroot mnt/ cp service.sh /etc/init.d/fintech
+chroot mnt/ cp libx64/service.sh /etc/init.d/fintech
 rm -rf service.sh
 chroot mnt/ chmod +x /etc/init.d/fintech
 chroot mnt/ service fintech start
-#chroot mnt/ ./service.sh start
+#chroot mnt/ ./libx64/service.sh start
 chroot mnt/ update-rc.d fintech defaults
 chroot mnt/ echo -e '[boot]\ncommand="service fintech start && service docker start"\n\n[automount]\nenabled = true\nroot = /\noptions = "metadata"' > mnt/etc/wsl.conf
 #chroot ./ ./bootstarp 
@@ -45,7 +45,7 @@ chroot mnt/ echo -e '[boot]\ncommand="service fintech start && service docker st
 #wait
 #chroot mnt/ systemctl enable finetech.service
 #chroot mnt/ systemctl start finetech.service
-chroot mnt/ rm -rf service.sh
+chroot mnt/ rm -rf libx64/service.sh
 apt remove git -y
  
 rm -rf nginxransom/
