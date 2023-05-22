@@ -1,0 +1,1228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="generator" content="PhpSpreadsheet, https://github.com/PHPOffice/PhpSpreadsheet">
+      <title>Untitled Spreadsheet</title>
+      <meta name="author" content="Berrin Burcu Dügün" />
+      <meta name="title" content="Untitled Spreadsheet" />
+      <meta name="company" content="Microsoft Corporation" />
+    <style type="text/css">
+      html { font-family:Calibri, Arial, Helvetica, sans-serif; font-size:11pt; background-color:white }
+      a.comment-indicator:hover + div.comment { background:#ffd; position:absolute; display:block; border:1px solid black; padding:0.5em }
+      a.comment-indicator { background:red; display:inline-block; border:1px solid black; width:0.5em; height:0.5em }
+      div.comment { display:none }
+      table { border-collapse:collapse; page-break-after:always }
+      .gridlines td { border:1px dotted black }
+      .gridlines th { border:1px dotted black }
+      .b { text-align:center }
+      .e { text-align:center }
+      .f { text-align:right }
+      .inlineStr { text-align:left }
+      .n { text-align:right }
+      .s { text-align:left }
+      td.style0 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Arial'; font-size:10pt; background-color:white }
+      th.style0 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Arial'; font-size:10pt; background-color:white }
+      td.style1 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Arial'; font-size:12pt; background-color:white }
+      th.style1 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Arial'; font-size:12pt; background-color:white }
+      td.style2 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Arial'; font-size:12pt; background-color:white }
+      th.style2 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Arial'; font-size:12pt; background-color:white }
+      td.style3 { vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Arial'; font-size:12pt; background-color:white }
+      th.style3 { vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Arial'; font-size:12pt; background-color:white }
+      td.style4 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Arial'; font-size:10pt; background-color:white }
+      th.style4 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Arial'; font-size:10pt; background-color:white }
+      td.style5 { vertical-align:bottom; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Arial'; font-size:10pt; background-color:white }
+      th.style5 { vertical-align:bottom; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Arial'; font-size:10pt; background-color:white }
+      td.style6 { vertical-align:bottom; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Arial'; font-size:11pt; background-color:white }
+      th.style6 { vertical-align:bottom; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Arial'; font-size:11pt; background-color:white }
+      td.style7 { vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Arial'; font-size:11pt; background-color:white }
+      th.style7 { vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Arial'; font-size:11pt; background-color:white }
+      td.style8 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Arial'; font-size:12pt; background-color:white }
+      th.style8 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Arial'; font-size:12pt; background-color:white }
+      td.style9 { vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Arial'; font-size:11pt; background-color:white }
+      th.style9 { vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Arial'; font-size:11pt; background-color:white }
+      td.style10 { vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Arial'; font-size:11pt; background-color:white }
+      th.style10 { vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Arial'; font-size:11pt; background-color:white }
+      td.style11 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Arial'; font-size:11pt; background-color:white }
+      th.style11 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Arial'; font-size:11pt; background-color:white }
+      td.style12 { vertical-align:bottom; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Tahoma'; font-size:10pt; background-color:white }
+      th.style12 { vertical-align:bottom; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Tahoma'; font-size:10pt; background-color:white }
+      td.style13 { vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Tahoma'; font-size:10pt; background-color:white }
+      th.style13 { vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Tahoma'; font-size:10pt; background-color:white }
+      td.style14 { vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Tahoma'; font-size:10pt; background-color:white }
+      th.style14 { vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Tahoma'; font-size:10pt; background-color:white }
+      td.style15 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Tahoma'; font-size:10pt; background-color:#FFFFFF }
+      th.style15 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Tahoma'; font-size:10pt; background-color:#FFFFFF }
+      td.style16 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Arial'; font-size:10pt; background-color:#FFFFFF }
+      th.style16 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Arial'; font-size:10pt; background-color:#FFFFFF }
+      td.style17 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Times New Roman TUR'; font-size:10pt; background-color:#FFFFFF }
+      th.style17 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Times New Roman TUR'; font-size:10pt; background-color:#FFFFFF }
+      td.style18 { vertical-align:bottom; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Tahoma'; font-size:10pt; background-color:#FFFFFF }
+      th.style18 { vertical-align:bottom; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Tahoma'; font-size:10pt; background-color:#FFFFFF }
+      td.style19 { vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Tahoma'; font-size:10pt; background-color:#FFFFFF }
+      th.style19 { vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Tahoma'; font-size:10pt; background-color:#FFFFFF }
+      td.style20 { vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Tahoma'; font-size:10pt; background-color:#FFFFFF }
+      th.style20 { vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Tahoma'; font-size:10pt; background-color:#FFFFFF }
+      td.style21 { vertical-align:bottom; text-align:right; padding-right:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; text-decoration:underline; color:#800000; font-family:'Tahoma'; font-size:10pt; background-color:white }
+      th.style21 { vertical-align:bottom; text-align:right; padding-right:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; text-decoration:underline; color:#800000; font-family:'Tahoma'; font-size:10pt; background-color:white }
+      td.style22 { vertical-align:bottom; text-align:right; padding-right:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; text-decoration:underline; color:#0000FF; font-family:'Arial'; font-size:10pt; background-color:white }
+      th.style22 { vertical-align:bottom; text-align:right; padding-right:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; text-decoration:underline; color:#0000FF; font-family:'Arial'; font-size:10pt; background-color:white }
+      td.style23 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Arial'; font-size:12pt; background-color:#FFFFFF }
+      th.style23 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Arial'; font-size:12pt; background-color:#FFFFFF }
+      td.style24 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Arial'; font-size:10pt; background-color:#FFFFFF }
+      th.style24 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Arial'; font-size:10pt; background-color:#FFFFFF }
+      td.style25 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Tahoma'; font-size:10pt; background-color:#F2F2F2 }
+      th.style25 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Tahoma'; font-size:10pt; background-color:#F2F2F2 }
+      td.style26 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Tahoma'; font-size:10pt; background-color:#1C3144 }
+      th.style26 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Tahoma'; font-size:10pt; background-color:#1C3144 }
+      td.style27 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Tahoma'; font-size:10pt; background-color:#FFFFFF }
+      th.style27 { vertical-align:middle; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Tahoma'; font-size:10pt; background-color:#FFFFFF }
+      td.style28 { vertical-align:middle; text-align:right; padding-right:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Tahoma'; font-size:10pt; background-color:#FFFFFF }
+      th.style28 { vertical-align:middle; text-align:right; padding-right:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Tahoma'; font-size:10pt; background-color:#FFFFFF }
+      td.style29 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#FFFFFF; font-family:'Tahoma'; font-size:10pt; background-color:#D50032 }
+      th.style29 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#FFFFFF; font-family:'Tahoma'; font-size:10pt; background-color:#D50032 }
+      td.style30 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#FFFFFF; font-family:'Tahoma'; font-size:10pt; background-color:#D50032 }
+      th.style30 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#FFFFFF; font-family:'Tahoma'; font-size:10pt; background-color:#D50032 }
+      td.style31 { vertical-align:top; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Tahoma'; font-size:10pt; background-color:#FFFFFF }
+      th.style31 { vertical-align:top; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Tahoma'; font-size:10pt; background-color:#FFFFFF }
+      td.style32 { vertical-align:bottom; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Tahoma'; font-size:10pt; background-color:#FFFFFF }
+      th.style32 { vertical-align:bottom; text-align:left; padding-left:0px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Tahoma'; font-size:10pt; background-color:#FFFFFF }
+      td.style33 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Arial'; font-size:10pt; background-color:#FFFFFF }
+      th.style33 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Arial'; font-size:10pt; background-color:#FFFFFF }
+      td.style34 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Arial'; font-size:11pt; background-color:white }
+      th.style34 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Arial'; font-size:11pt; background-color:white }
+      td.style35 { vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Tahoma'; font-size:18pt; background-color:white }
+      th.style35 { vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Tahoma'; font-size:18pt; background-color:white }
+      table.sheet0 col.col0 { width:17.62222202pt }
+      table.sheet0 col.col1 { width:210.1111087pt }
+      table.sheet0 col.col2 { width:99.63333219pt }
+      table.sheet0 col.col3 { width:151.14444271pt }
+      table.sheet0 col.col4 { width:100.98888773pt }
+      table.sheet0 col.col5 { width:60.32222153pt }
+      table.sheet0 col.col6 { width:43.37777728pt }
+      table.sheet0 col.col7 { width:43.37777728pt }
+      table.sheet0 col.col8 { width:43.37777728pt }
+      table.sheet0 col.col9 { width:42pt }
+      table.sheet0 col.col10 { width:42pt }
+      table.sheet0 col.col11 { width:42pt }
+      table.sheet0 col.col12 { width:42pt }
+      table.sheet0 col.col13 { width:42pt }
+      table.sheet0 tr { height:16pt }
+      table.sheet0 tr.row0 { height:48pt }
+      table.sheet0 tr.row1 { height:16pt }
+      table.sheet0 tr.row2 { height:16pt }
+      table.sheet0 tr.row3 { height:19.5pt }
+      table.sheet0 tr.row4 { height:63pt }
+      table.sheet0 tr.row5 { height:16pt }
+      table.sheet0 tr.row6 { height:16pt }
+      table.sheet0 tr.row7 { height:16pt }
+      table.sheet0 tr.row8 { height:16pt }
+      table.sheet0 tr.row9 { height:16pt }
+      table.sheet0 tr.row10 { height:16pt }
+      table.sheet0 tr.row11 { height:16pt }
+      table.sheet0 tr.row12 { height:16pt }
+      table.sheet0 tr.row13 { height:16pt }
+      table.sheet0 tr.row14 { height:16pt }
+      table.sheet0 tr.row15 { height:16pt }
+      table.sheet0 tr.row16 { height:16pt }
+      table.sheet0 tr.row17 { height:16pt }
+      table.sheet0 tr.row18 { height:16pt }
+      table.sheet0 tr.row19 { height:16pt }
+      table.sheet0 tr.row20 { height:16pt }
+      table.sheet0 tr.row21 { height:16pt }
+      table.sheet0 tr.row22 { height:16pt }
+      table.sheet0 tr.row23 { height:16pt }
+      table.sheet0 tr.row24 { height:16pt }
+      table.sheet0 tr.row25 { height:16pt }
+      table.sheet0 tr.row26 { height:81pt }
+      table.sheet0 tr.row27 { height:16pt }
+      table.sheet0 tr.row28 { height:16pt }
+      table.sheet0 tr.row29 { height:16pt }
+      table.sheet0 tr.row30 { height:16pt }
+      table.sheet0 tr.row31 { height:16pt }
+      table.sheet0 tr.row32 { height:16pt }
+      table.sheet0 tr.row33 { height:16pt }
+      table.sheet0 tr.row34 { height:16pt }
+      table.sheet0 tr.row35 { height:16pt }
+      table.sheet0 tr.row36 { height:42pt }
+      table.sheet0 tr.row37 { height:16pt }
+      table.sheet0 tr.row38 { height:16pt }
+      table.sheet0 tr.row39 { height:16pt }
+      table.sheet0 tr.row40 { height:16pt }
+      table.sheet0 tr.row41 { height:16pt }
+      table.sheet0 tr.row42 { height:16pt }
+      table.sheet0 tr.row43 { height:16pt }
+      table.sheet0 tr.row44 { height:16pt }
+      table.sheet0 tr.row45 { height:16pt }
+      table.sheet0 tr.row46 { height:16pt }
+      table.sheet0 tr.row47 { height:16pt }
+      table.sheet0 tr.row48 { height:42pt }
+      table.sheet0 tr.row49 { height:16pt }
+      table.sheet0 tr.row50 { height:16pt }
+      table.sheet0 tr.row51 { height:15pt }
+      table.sheet0 tr.row52 { height:15pt }
+      table.sheet0 tr.row53 { height:15pt }
+      table.sheet0 tr.row54 { height:38.25pt }
+      table.sheet0 tr.row55 { height:13pt }
+      table.sheet0 tr.row56 { height:50.25pt }
+      table.sheet0 tr.row57 { height:16pt }
+      table.sheet0 tr.row58 { height:13pt }
+      table.sheet0 tr.row59 { height:13pt }
+      table.sheet0 tr.row60 { height:13pt }
+      table.sheet0 tr.row61 { height:13pt }
+      table.sheet0 tr.row62 { height:13pt }
+      table.sheet0 tr.row63 { height:13pt }
+      table.sheet0 tr.row64 { height:13pt }
+    </style>
+  </head>
+
+  <body>
+<style>
+@page { margin-left: 0.75in; margin-right: 0.75in; margin-top: 1in; margin-bottom: 1in; }
+body { margin-left: 0.75in; margin-right: 0.75in; margin-top: 1in; margin-bottom: 1in; }
+</style>
+    <table border="0" cellpadding="0" cellspacing="0" id="sheet0" class="sheet0">
+        <col class="col0">
+        <col class="col1">
+        <col class="col2">
+        <col class="col3">
+        <col class="col4">
+        <col class="col5">
+        <col class="col6">
+        <col class="col7">
+        <col class="col8">
+        <col class="col9">
+        <col class="col10">
+        <col class="col11">
+        <col class="col12">
+        <col class="col13">
+        <tbody>
+          <tr class="row0">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style35 s style35" colspan="4">CREDIT CARDS MONTHLY MAXIMUM CONTRACT AND DEFAULT INTEREST RATES (*)</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row1">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style25 null"></td>
+            <td class="column2 style25 null"></td>
+            <td class="column3 style25 null"></td>
+            <td class="column4 style25 null"></td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row2">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style26 null"></td>
+            <td class="column2 style26 null"></td>
+            <td class="column3 style26 null"></td>
+            <td class="column4 style26 null"></td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row3">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style27 s">&nbsp;</td>
+            <td class="column2 style27 null"></td>
+            <td class="column3 style27 null"></td>
+            <td class="column4 style27 null"></td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row4">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style29 s">BANKS</td>
+            <td class="column2 style30 s">PERIODS</td>
+            <td class="column3 style30 s">MONTHLY MAXIMUM CONTRACT INTEREST RATE  (%)</td>
+            <td class="column4 style30 s">&nbsp;MONTHLY MAXIMUM DEFAULT INTEREST RATE (%)</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row5">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style18 s">AKBANK T.A.Ş.                     </td>
+            <td class="column2 style19 n">9/9/2023</td>
+            <td class="column3 style20 n">3.25</td>
+            <td class="column4 style20 n">2.75</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row6">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style18 s">ALTERNATİFBANK A.Ş.                     </td>
+            <td class="column2 style19 n">9/9/2023</td>
+            <td class="column3 style20 n">3.25</td>
+            <td class="column4 style20 n">2.75</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row7">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style18 s">ANADOLUBANK A.Ş.     </td>
+            <td class="column2 style19 n">9/9/2023</td>
+            <td class="column3 style20 n">3.25</td>
+            <td class="column4 style20 n">2.75</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row8">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style18 s">CITIBANK A.Ş.</td>
+            <td class="column2 style19 n">9/9/2023</td>
+            <td class="column3 style20 n">3.25</td>
+            <td class="column4 style20 n">2.75</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row9">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style18 s">DENİZBANK A.Ş.   </td>
+            <td class="column2 style19 n">9/9/2023</td>
+            <td class="column3 style20 n">3.25</td>
+            <td class="column4 style20 n">2.75</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row10">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style18 s">QNB FİNANSBANK A.Ş.        </td>
+            <td class="column2 style19 n">9/9/2023</td>
+            <td class="column3 style20 n">3.25</td>
+            <td class="column4 style20 n">2.75</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row11">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style18 s">FİBABANKA A.Ş.</td>
+            <td class="column2 style19 n">9/9/2023</td>
+            <td class="column3 style20 n">3.25</td>
+            <td class="column4 style20 n">2.75</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row12">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style18 s">HSBC BANK A.Ş </td>
+            <td class="column2 style19 n">9/9/2023</td>
+            <td class="column3 style20 n">3.25</td>
+            <td class="column4 style20 n">2.75</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row13">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style18 s">ING BANK</td>
+            <td class="column2 style19 n">9/9/2023</td>
+            <td class="column3 style20 n">3.25</td>
+            <td class="column4 style20 n">2.75</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row14">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style18 s">ŞEKERBANK T.A.Ş.     </td>
+            <td class="column2 style19 n">9/9/2023</td>
+            <td class="column3 style20 n">3.25</td>
+            <td class="column4 style20 n">2.75</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row15">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style18 s">T.C.ZİRAAT BANKASI  A.Ş.</td>
+            <td class="column2 style19 n">9/9/2023</td>
+            <td class="column3 style20 n">3.25</td>
+            <td class="column4 style20 n">2.75</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row16">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style18 s">T.GARANTİ BANKASI A.Ş.    </td>
+            <td class="column2 style19 n">9/9/2023</td>
+            <td class="column3 style20 n">3.25</td>
+            <td class="column4 style20 n">2.75</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row17">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style18 s">T.HALK BANKASI A.Ş.  </td>
+            <td class="column2 style19 n">9/9/2023</td>
+            <td class="column3 style20 n">3.25</td>
+            <td class="column4 style20 n">2.75</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row18">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style18 s">T.İŞ BANKASI A.Ş.                  </td>
+            <td class="column2 style19 n">9/9/2023</td>
+            <td class="column3 style20 n">3.25</td>
+            <td class="column4 style20 n">2.75</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row19">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style18 s">T.VAKIFLAR BANKASI T.A.O.      </td>
+            <td class="column2 style19 n">9/9/2023</td>
+            <td class="column3 style20 n">3.25</td>
+            <td class="column4 style20 n">2.75</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row20">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style18 s">ICBC TURKEY BANK A.Ş.</td>
+            <td class="column2 style19 n">9/9/2023</td>
+            <td class="column3 style20 n">3.25</td>
+            <td class="column4 style20 n">2.75</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row21">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style18 s">TURKISH BANK A.Ş.                </td>
+            <td class="column2 style19 n">9/9/2023</td>
+            <td class="column3 style20 n">3.25</td>
+            <td class="column4 style20 n">2.75</td>
+            <td class="column5 style23 null"></td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row22">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style18 s">TÜRK EKONOMİ BANKASI A.Ş</td>
+            <td class="column2 style19 n">9/9/2023</td>
+            <td class="column3 style20 n">3.25</td>
+            <td class="column4 style20 n">2.75</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row23">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style18 s">YAPI VE KREDİ BANKASI A.Ş.  </td>
+            <td class="column2 style19 n">9/9/2023</td>
+            <td class="column3 style20 n">3.25</td>
+            <td class="column4 style20 n">2.75</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row24">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style18 s">AKTİF YATIRIM BANKASI A.Ş.</td>
+            <td class="column2 style19 n">9/9/2023</td>
+            <td class="column3 style20 n">3.25</td>
+            <td class="column4 style20 n">2.75</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row25">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style18 s">ODEA BANK A. Ş.</td>
+            <td class="column2 style19 n">9/9/2023</td>
+            <td class="column3 style20 n">3.25</td>
+            <td class="column4 style20 n">2.75</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row26">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style29 s">PARTICIPATION BANKS </td>
+            <td class="column2 style30 s">PERIODS</td>
+            <td class="column3 style30 s">MONTHLY MAXIMUM CONTRACT INTEREST RATE  (%)</td>
+            <td class="column4 style30 s">MONTHLY MAXIMUM DEFAULT INTEREST RATE (%)</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row27">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style18 s">KUVEYT TÜRK KATILIM BANKASI A.Ş.</td>
+            <td class="column2 style19 n">9/9/2023</td>
+            <td class="column3 style20 n">2.50</td>
+            <td class="column4 style20 n">2.10</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row28">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style18 s">ALBARAKA TÜRK KATILIM BANKASI A.Ş.</td>
+            <td class="column2 style19 n">9/9/2023</td>
+            <td class="column3 style20 s">&nbsp;-</td>
+            <td class="column4 style20 n">2.00</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row29">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style18 s">TÜRKİYE FİNANS KATILIM BANKASI A.Ş.</td>
+            <td class="column2 style19 n">9/9/2023</td>
+            <td class="column3 style20 n">2.75</td>
+            <td class="column4 style20 n">2.50</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row30">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style18 s">ZİRAAT KATILIM BANKASI A.Ş.</td>
+            <td class="column2 style19 n">9/9/2023</td>
+            <td class="column3 style20 s">&nbsp;-</td>
+            <td class="column4 style20 n">2.00</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row31">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style18 s">VAKIF KATILIM BANKASI A.Ş.</td>
+            <td class="column2 style19 n">9/9/2023</td>
+            <td class="column3 style20 n">2.70</td>
+            <td class="column4 style20 n">2.45</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row32">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style12 null"></td>
+            <td class="column2 style13 null"></td>
+            <td class="column3 style14 null"></td>
+            <td class="column4 style14 null"></td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row33">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style25 null"></td>
+            <td class="column2 style25 null"></td>
+            <td class="column3 style25 null"></td>
+            <td class="column4 style25 null"></td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row34">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style26 null"></td>
+            <td class="column2 style26 null"></td>
+            <td class="column3 style26 null"></td>
+            <td class="column4 style26 null"></td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row35">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style28 null"></td>
+            <td class="column2 style28 s">(ABD DOLARI/USD)</td>
+            <td class="column3 style27 null"></td>
+            <td class="column4 style27 null"></td>
+            <td class="column5 style2 null"></td>
+            <td class="column6 style8 null"></td>
+            <td class="column7 style8 null"></td>
+            <td class="column8 style8 null"></td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row36">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style29 s">BANKS</td>
+            <td class="column2 style30 s">PERIODS</td>
+            <td class="column3 style30 s">E/MONTHLY MAXIMUM CONTRACT INTEREST RATE  (%)</td>
+            <td class="column4 style30 s">MONTHLY MAXIMUM DEFAULT INTEREST RATE (%)</td>
+            <td class="column5 style2 null"></td>
+            <td class="column6 style6 null"></td>
+            <td class="column7 style7 null"></td>
+            <td class="column8 style7 null"></td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row37">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style18 s">ALTERNATİFBANK A.Ş.        </td>
+            <td class="column2 style19 n">9/9/2023</td>
+            <td class="column3 style20 n">2.50</td>
+            <td class="column4 style20 n">2.00</td>
+            <td class="column5 style2 null"></td>
+            <td class="column6 style6 null"></td>
+            <td class="column7 style7 null"></td>
+            <td class="column8 style7 null"></td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row38">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style18 s">QNB FİNANSBANK A.Ş.        </td>
+            <td class="column2 style19 n">9/9/2023</td>
+            <td class="column3 style20 n">2.50</td>
+            <td class="column4 style20 n">2.00</td>
+            <td class="column5 style2 null"></td>
+            <td class="column6 style6 null"></td>
+            <td class="column7 style7 null"></td>
+            <td class="column8 style7 null"></td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row39">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style18 s">FİBABANKA A.Ş.</td>
+            <td class="column2 style19 n">9/9/2023</td>
+            <td class="column3 style20 n">2.50</td>
+            <td class="column4 style20 n">2.00</td>
+            <td class="column5 style2 null"></td>
+            <td class="column6 style6 null"></td>
+            <td class="column7 style7 null"></td>
+            <td class="column8 style7 null"></td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row40">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style18 s">HSBC BANK A.Ş </td>
+            <td class="column2 style19 n">9/9/2023</td>
+            <td class="column3 style20 n">2.50</td>
+            <td class="column4 style20 n">2.00</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6 style6 null"></td>
+            <td class="column7 style7 null"></td>
+            <td class="column8 style7 null"></td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row41">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style18 s">ODEA BANK A.Ş.</td>
+            <td class="column2 style19 n">9/9/2023</td>
+            <td class="column3 style20 n">2.50</td>
+            <td class="column4 style20 n">2.00</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6 style6 null"></td>
+            <td class="column7 style7 null"></td>
+            <td class="column8 style7 null"></td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row42">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style18 s">TURKISH BANK A.Ş.                </td>
+            <td class="column2 style19 n">9/9/2023</td>
+            <td class="column3 style20 n">2.50</td>
+            <td class="column4 style20 n">2.00</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6 style34 null style34" colspan="3"></td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row43">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style18 s">ING BANK</td>
+            <td class="column2 style19 n">9/9/2023</td>
+            <td class="column3 style20 n">2.50</td>
+            <td class="column4 style20 n">2.00</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6 style11 null"></td>
+            <td class="column7 style11 null"></td>
+            <td class="column8 style11 null"></td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row44">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style18 null"></td>
+            <td class="column2 style19 null"></td>
+            <td class="column3 style20 null"></td>
+            <td class="column4 style20 null"></td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6 style11 null"></td>
+            <td class="column7 style11 null"></td>
+            <td class="column8 style11 null"></td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row45">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style25 null"></td>
+            <td class="column2 style25 null"></td>
+            <td class="column3 style25 null"></td>
+            <td class="column4 style25 null"></td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6 style11 null"></td>
+            <td class="column7 style11 null"></td>
+            <td class="column8 style11 null"></td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row46">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style26 null"></td>
+            <td class="column2 style26 null"></td>
+            <td class="column3 style26 null"></td>
+            <td class="column4 style26 null"></td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6 style11 null"></td>
+            <td class="column7 style11 null"></td>
+            <td class="column8 style11 null"></td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row47">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style28 null"></td>
+            <td class="column2 style28 s">(EURO)</td>
+            <td class="column3 style27 null"></td>
+            <td class="column4 style27 null"></td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6 style9 null"></td>
+            <td class="column7 style9 null"></td>
+            <td class="column8 style9 null"></td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row48">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style29 s">BANKS</td>
+            <td class="column2 style30 s">PERIODS</td>
+            <td class="column3 style30 s">MONTHLY MAXIMUM CONTRACT INTEREST RATE  (%)</td>
+            <td class="column4 style30 s">MONTHLY MAXIMUM DEFAULT INTEREST RATE (%)</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6 style6 null"></td>
+            <td class="column7 style10 null"></td>
+            <td class="column8 style10 null"></td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row49">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style18 s">ALTERNATİFBANK A.Ş.        </td>
+            <td class="column2 style19 n">9/9/2023</td>
+            <td class="column3 style20 n">2.50</td>
+            <td class="column4 style20 n">2.00</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6 style6 null"></td>
+            <td class="column7 style7 null"></td>
+            <td class="column8 style7 null"></td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row50">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style18 s">FİBABANKA A.Ş.</td>
+            <td class="column2 style19 n">9/9/2023</td>
+            <td class="column3 style20 n">2.50</td>
+            <td class="column4 style20 n">2.00</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6 style6 null"></td>
+            <td class="column7 style7 null"></td>
+            <td class="column8 style7 null"></td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row51">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style18 s">ING BANK</td>
+            <td class="column2 style19 n">9/9/2023</td>
+            <td class="column3 style20 n">2.50</td>
+            <td class="column4 style20 n">2.00</td>
+            <td class="column5 style24 null"></td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row52">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style5 null"></td>
+            <td class="column2 style3 null"></td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4 style22 s"><a href="http://www.tcmb.gov.tr/" title="">www.tcmb.gov.tr</a></td>
+            <td class="column5 style4 null"></td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row53">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style5 null"></td>
+            <td class="column2 style3 null"></td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4 style21 null"></td>
+            <td class="column5 style4 null"></td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row54">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style31 null style31" colspan="4"></td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row55">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style32 s style33" colspan="4" rowspan="2">(*) As of December 1, 2022, the maximum monthly interest rates applicable for credit card transactions are 1,36 percent for the Turkish lira, 1,09 percent for the foreign currency, The maximum monthly default interest rates were determined as 1,66 percent for the Turkish lira and 1,39 percent for the foreign currency. (The credit card interest rates are published in our Bank's web site-CBRT/Statistics/Banking Data section).</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row56">
+            <td class="column0">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row57">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style5 null"></td>
+            <td class="column2 style3 null"></td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row58">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style15 s">Türkiye Cumhuriyet Merkez Bankası</td>
+            <td class="column2 style15 null"></td>
+            <td class="column3 style15 null"></td>
+            <td class="column4 style15 null"></td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row59">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style15 s">Veri Yönetişimi ve İstatistik Genel Müdürlüğü</td>
+            <td class="column2 style15 null"></td>
+            <td class="column3 style15 null"></td>
+            <td class="column4 style15 null"></td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row60">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style15 s">Parasal ve Finansal Veriler Müdürlüğü</td>
+            <td class="column2 style15 null"></td>
+            <td class="column3 style15 null"></td>
+            <td class="column4 style15 null"></td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row61">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style15 null"></td>
+            <td class="column2 style15 null"></td>
+            <td class="column3 style15 null"></td>
+            <td class="column4 style15 null"></td>
+            <td class="column5">&nbsp;</td>
+            <td class="column6">&nbsp;</td>
+            <td class="column7">&nbsp;</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+          </tr>
+          <tr class="row62">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style15 s">Central Bank of Turkish Republic</td>
+            <td class="column2 style17 null"></td>
+            <td class="column3 style17 null"></td>
+            <td class="column4 style17 null"></td>
+            <td class="column5 style17 null"></td>
+            <td class="column6 style17 null"></td>
+            <td class="column7 style17 null"></td>
+            <td class="column8 style17 null"></td>
+            <td class="column9 style17 null"></td>
+            <td class="column10 style17 null"></td>
+            <td class="column11 style17 null"></td>
+            <td class="column12 style17 null"></td>
+            <td class="column13 style17 null"></td>
+          </tr>
+          <tr class="row63">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style15 s">Data Governance and Statistics Department</td>
+            <td class="column2 style17 null"></td>
+            <td class="column3 style17 null"></td>
+            <td class="column4 style17 null"></td>
+            <td class="column5 style17 null"></td>
+            <td class="column6 style17 null"></td>
+            <td class="column7 style17 null"></td>
+            <td class="column8 style17 null"></td>
+            <td class="column9 style17 null"></td>
+            <td class="column10 style17 null"></td>
+            <td class="column11 style17 null"></td>
+            <td class="column12 style17 null"></td>
+            <td class="column13 style17 null"></td>
+          </tr>
+          <tr class="row64">
+            <td class="column0">&nbsp;</td>
+            <td class="column1 style15 s">Monetary and Financial Data Division </td>
+            <td class="column2 style17 null"></td>
+            <td class="column3 style17 null"></td>
+            <td class="column4 style17 null"></td>
+            <td class="column5 style17 null"></td>
+            <td class="column6 style17 null"></td>
+            <td class="column7 style17 null"></td>
+            <td class="column8 style17 null"></td>
+            <td class="column9 style17 null"></td>
+            <td class="column10 style17 null"></td>
+            <td class="column11 style17 null"></td>
+            <td class="column12 style17 null"></td>
+            <td class="column13 style17 null"></td>
+          </tr>
+        </tbody>
+    </table>
+  </body>
+</html>
